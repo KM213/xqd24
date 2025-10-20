@@ -156,29 +156,29 @@ class KFC:
 #         print(f"{self.name}的学号修改为：【{self.__id}】")
 
 # 继承
-# class A:
-#     def __init__(self):
-#         self.__a = 1
-#     def funa(self):
-#         print("funa")
-# class B:
-#     def __init__(self):
-#         self.__b = 2
-#     def getb(self):
-#         print(f"getb:{self.__b}")
-#         print(self.__b)
-#     def funb(self):
-#         print("funb")
-# class C(A, B):
-#     def __init__(self):
-#         super().__init__()
-#         super(A, self).__init__()    # 解决多个父类时的查找顺序问题。super(A, self)返回一个代理，表示在MRO中跳过A从之后继续查找顺序，即不会因A更近而忽略掉B的查找
-#         self.c = 3
-#         pass
-#     def func(self):
-#         print("func")
-#     def getb(self):
-#         super().getb()
+class A:
+    def __init__(self):
+        self.__a = 1
+    def funa(self):
+        print("funa")
+class B:
+    def __init__(self):
+        self.__b = 2
+    def getb(self):
+        print(f"getb:{self.__b}")
+        print(self.__b)
+    def funb(self):
+        print("funb")
+class C(A, B):
+    def __init__(self):
+        super().__init__()
+        # super(A, self).__init__()    # 解决多个父类时的查找顺序问题。super(A, self)返回一个代理，表示在MRO中跳过A从之后继续查找顺序，即不会因A更近而忽略掉B的查找
+        self.c = 3
+        pass
+    def func(self):
+        print("func")
+    def getb(self):
+        super().getb()
 
 # 继承 2
 class Animal:
@@ -229,21 +229,21 @@ if __name__ == '__main__':
     # stu2.show_id()
 
     # 继承
-    # c1 = C()
-    # c1.funa()
-    # c1.funb()
-    # c1.func()
-    # c1.getb()
+    c1 = C()
+    c1.funa()
+    c1.funb()
+    c1.func()
+    c1.getb()
 
-    # animal1 = Animal(3, "灰色")
-    cat1 = Cat("布偶", 2, "灰色")
-    # 继承属性
-    print(f"颜色：{cat1.color}")
-
-    cat1.eat("鱼")   # 覆盖方法
-    # cat1.eat()      # 继承方法，此处子类已重写eat()方法，所以父类的eat()方法无法再使用
-    cat1.get_age()  # 继承方法
-    cat1.shot()     # 继承方法
-    cat1.shot_cat() # 自有方法
+    # # animal1 = Animal(3, "灰色")
+    # cat1 = Cat("布偶", 2, "灰色")
+    # # 继承属性
+    # print(f"颜色：{cat1.color}")
+    #
+    # cat1.eat("鱼")   # 覆盖方法
+    # # cat1.eat()      # 继承方法，此处子类已重写eat()方法，所以父类的eat()方法无法再使用
+    # cat1.get_age()  # 继承方法
+    # cat1.shot()     # 继承方法
+    # cat1.shot_cat() # 自有方法
 
     pass

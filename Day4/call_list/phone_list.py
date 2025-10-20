@@ -1,5 +1,5 @@
 """
-通讯录
+通讯录：列表存储
 """
 import os
 import time

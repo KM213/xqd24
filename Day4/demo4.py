@@ -143,4 +143,4 @@ def fun4():
 
 
 if __name__ == '__main__':
-    fun4()
+    fun1()
