@@ -2,7 +2,6 @@
 def partation0(nums, left, right):
     i = left
     m = int(nums[right])
-    # print("partation" + i+ m)
     for j in range(left, right):
         if int(nums[j]) <= m:
             nums[i], nums[j] = nums[j], nums[i]
