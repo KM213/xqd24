@@ -16,6 +16,8 @@ Day3 10.13
             split() ,
             strip(),
             index()
+            join(): 用于将序列中的元素以指定的字符连接生成一个新的字符串。它是字符串操作中的常用函数。
+                    [格式为：str.join(sequence)  str为分隔符，sequence为指定序列]
 """
 def fun1():
     i = 1
