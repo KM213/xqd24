@@ -207,7 +207,7 @@ if __name__ == '__main__':
     #     return inner_fun2
     # x = outer_fun2(3)
     # x(1)
-
+    pass
     # 闭包计数器
     def mycounter():
         count = 0
