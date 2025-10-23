@@ -99,35 +99,49 @@ class Dog:
     def sleep(self):
         print("zZZ")
 
+# 变量作用域
+global_var = "I'm global"  # 全局变量
+def test_scope():
+    local_var = "I'm local"  # 局部变量
+    print(global_var)  # 可以访问全局变量
+    print(local_var)   # 可以访问局部变量
+def edit():
+    local_var = "I'm local after edit"
+    global_var = "I'm global after edit by fun"
+    print(local_var)
+    print(global_var)
+test_scope()
+edit()
+# print(local_var)  # 错误！局部变量在外部不可访问
 
-
-bb = 111
-if __name__ == '__main__':
-    # 传参
-    # num4 = fun1(5, 2)
-    # print(num4)
-
-    # 变量与作用域
-    # fun2()
-
-    # 参数
-    # myarg(1,2, 3,4,5, c=6, x=8, n1=1,n2=2,n3=3)
-
-    # 类：
-    ba = Dog("yellow", "金毛", "男")
-    pipi = Dog("gray", "雪纳瑞", "男")
-    print(ba.color)
-    print(ba.variety)
-    print(ba.sex)
-    ba.shot("汪汪！")
-    ba.run("咚咚咚")
-    ba.eat("骨头")
-    ba.sleep()
-    print(pipi.color)
-    print(pipi.variety)
-    print(pipi.sex)
-    pipi.shot("呜呜呜")
-    pipi.run("噔噔噔")
-    pipi.eat("饼干")
-    pipi.sleep()
-cc = 222
+# bb = 111
+# if __name__ == '__main__':
+#     # 传参
+#     # num4 = fun1(5, 2)
+#     # print(num4)
+#
+#     # 变量与作用域
+#     # fun2()
+#
+#     # 参数
+#     # myarg(1,2, 3,4,5, c=6, x=8, n1=1,n2=2,n3=3)
+#
+#     # 类：
+#     # ba = Dog("yellow", "金毛", "男")
+#     # pipi = Dog("gray", "雪纳瑞", "男")
+#     # print(ba.color)
+#     # print(ba.variety)
+#     # print(ba.sex)
+#     # ba.shot("汪汪！")
+#     # ba.run("咚咚咚")
+#     # ba.eat("骨头")
+#     # ba.sleep()
+#     # print(pipi.color)
+#     # print(pipi.variety)
+#     # print(pipi.sex)
+#     # pipi.shot("呜呜呜")
+#     # pipi.run("噔噔噔")
+#     # pipi.eat("饼干")
+#     # pipi.sleep()
+#     pass
+# cc = 222
